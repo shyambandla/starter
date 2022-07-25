@@ -1,0 +1,16 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "base code for express",
+  "main": "index.js",
+  "scripts": {
+    "monitor": "nodemon index.js",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shyam",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}

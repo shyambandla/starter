@@ -19,6 +19,8 @@ const userSchema=new mongoose.Schema({
     age:Number,
 });
 
+
+
 const User=mongoose.model("User", userSchema);
 
 
@@ -42,6 +44,18 @@ app.get('/add/:a/:b',(req,res)=>{
     //res.send((a+b).toString());
 
 });
+
+
+app.get('/getUsers',(req,res)=>{
+    User.find({name:"shyam"}).then((user,err)=>{
+        console.log(user);
+        res.send(JSON.stringify(user));
+    }).catch((err)=>{
+        console.log(err);
+    }   );
+
+    //res.send("ok!");
+})
 
 
 app.post("/addUser",(req,res)=>{

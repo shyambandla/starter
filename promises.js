@@ -3,7 +3,16 @@
 
 const p=new Promise((resolve,reject)=>{
 
+    console.log(typeof resolve);
 
+    try{
+    setTimeout(()=>{
+        resolve('Success');
+    },2000);
+}catch(err){
+    reject(err);
+
+}
 
 }
 );
